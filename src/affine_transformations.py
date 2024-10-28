@@ -72,7 +72,7 @@ def get_affine_transform_matrix(height, width):
     cos_theta = 0.5  # cos(60 degrees)
     sin_theta = 0.86602540378  # sin(60 degrees)
 
-    # define transformation matrices without using numpy functions
+    # define transformation matrices
     scale_matrix = [
         [scale_factor, 0, 0],
         [0, scale_factor, 0],
