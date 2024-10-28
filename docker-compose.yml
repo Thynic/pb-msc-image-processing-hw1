@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  python-app:
+    image: python:3.9
+    container_name: msc-image-processing-hw1 # Updated container name
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ./assets:/app/assets # Mount assets directory
+    environment:
+      - PYTHONUNBUFFERED=1
+    entrypoint:
+      ["sh", "-c", "pip install -r requirements.txt && python3 src/main.py"]
